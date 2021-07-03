@@ -16,17 +16,19 @@ body{
 
     font-family: 'Roboto', sans-serif;
     background-color: #edeff0;
+    text-decoration: none;
 }
 header{
     background-color: #fff;
     
 }
 
-header a {
+header a{
     display:inline-block;
     padding: 15px;
     text-decoration: none; 
     color: #000;
+    border: 1px solid transparent;
 
 }
 
@@ -38,11 +40,13 @@ header #logo{
 header nav li{
     font-weight: bold;
     display:inline-block;
+    color: #000;
 
 }
 
 header nav a{
     transition: 0.4s;
+    color: #000;
 }
 
 header nav a:hover{
@@ -56,7 +60,7 @@ header nav a:hover{
 
 #intro{
 
-    min-height: 350px;
+    min-height: 400px;
     background-image: url(../img/img1.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -87,6 +91,8 @@ header nav a:hover{
 
 .intro-text .call-to-action a{
     background-color: #26a65b;
+    font-weight: bold;
+    text-decoration: none;
     color: #fff;
     padding: 15px;
     border-radius: 5px;
@@ -95,7 +101,8 @@ header nav a:hover{
 }
 
 .intro-text .call-to-action a:hover{
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.3)
+    background-color: #0e6633;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 }
 
 /* /Intro section */
@@ -180,11 +187,15 @@ header nav a:hover{
     padding:20px;
 }
 
-#blog h4{
+#blog h3{
     font-size: 24px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
     margin: 20px;
+}
+
+#blog p{
+    font-size: 18px;
 }
 
 #blog .call-to-action{
@@ -193,11 +204,18 @@ header nav a:hover{
 
 #blog .call-to-action a, .article-button a{
     background-color: #26a65b;
+    font-weight: bold;
+    text-decoration: none;
     color: #fff;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     display:inline-block;
     transition: box-shadow 0.4s;
+}
+
+#blog .call-to-action a:hover, .article-button a:hover{
+    background-color: #0e6633;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 }
 
 .article-container{
@@ -243,4 +261,179 @@ header nav a:hover{
 
 /*Testimonials */
 
-/*Testimonials */
+#testimonials{
+    text-align: center;
+    background-color: #fff;
+}
+
+.testimonial{
+    padding: 10px 0px;
+}
+
+#testimonials h2{
+    padding:  15px 0px;
+    font-weight: bold;
+    font-size: 24px;
+    font-family:'Open Sans', sans-serif;
+}
+
+#testimonials h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.testimonial p{
+    font-size: 18px;
+    padding: 10px 5px;
+
+}
+
+.testimonial h3{
+    font-weight: bold;
+}
+
+.testimonial img{
+    height:200px;
+    width:200px;
+    margin: 20px 10px;
+    border-radius: 50%;
+}
+
+/* /Testimonials */
+
+/* Footer */
+
+footer {
+    background-color:#000;
+    color: #fff;
+    padding: 0px 10px;
+}
+
+.services-footer h5{
+
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 0px;
+    font-weight: bold;
+}
+nav h6{
+
+    font-size: 16px;
+    padding: 5px 0px;
+
+}
+
+.contact-info{
+    padding: 10px 0px;
+}
+
+.contact-info p{
+
+    margin: 10px 0px;
+
+}
+
+.contact-form {
+    padding: 20px 0px;
+}
+
+.contact-form input{
+
+    width:100%;
+    padding:15px;
+
+}
+
+.contact-form button{
+    background-color: #26a65b;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    display:inline-block;
+    transition: box-shadow 0.4s;
+    margin:10px 0px;
+    border: none;
+}
+
+.contact-form button:hover{
+    background-color: #0e6633;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+
+/* /Footer*/
+
+/* Media queries */
+
+@media screen and (min-width: 750px){
+
+    /* Header */
+
+        header #logo{
+            display: inline-block;
+            width: 30%;
+        }
+        header nav{
+            display: inline-block;
+            width: 60%;
+        }
+
+    /* /Header */
+
+    /*Intro */
+
+        #intro {
+            height: 600px;
+        }
+        .intro-text{
+            top: 200px;
+        }
+    /* /Intro */
+    
+    /* Welcome */
+        .services-container{
+            max-width:500px;
+        }
+        
+
+    /* /Welcome */
+
+    /* Blog */
+    
+        #blog .article{
+            float: left;
+            width:40%;
+        }
+        #blog .article-container:after{
+            content: '';
+            display:block;
+            clear: both;
+        }
+
+    /* /Blog */
+
+    /*Footer */
+        footer .services-footer, footer .contact-info{
+            display: inline-block;
+            width: 46%;
+        }
+        footer .contact-form input{
+            width: 70%;
+        }
+        footer .contact-form button{
+            margin: 0px 10px;
+        }
+
+    /* /Footer */
+}
+
+    
+
+
+/* /Media queries */
